@@ -209,7 +209,7 @@ export default {
       const toolbar = new Toolbar({ container: this.$refs['toolbar'].$el })
       const addItemPanel = new AddItemPanel({ container: this.$refs['addItemPanel'].$el })
       const canvasPanel = new CanvasPanel({ container: this.$refs['canvas'] })
-      plugins = [this.cmdPlugin, toolbar, addItemPanel, canvasPanel]
+      plugins = [this.cmdPlugin, toolbar, addItemPanel, canvasPanel, new G6.Grid()]
     }
     const width = this.$refs['canvas'].offsetWidth
     this.graph = new G6.Graph({

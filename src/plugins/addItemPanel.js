@@ -27,14 +27,12 @@ class AddItemPanel {
     const children = parentNode.querySelectorAll(
       'div.ant-collapse-item>div.ant-collapse-content>.ant-collapse-content-box>img[data-item]'
     )
-    console.log(children)
     each(children, (child) => {
       const addModel = new Function('return ' + child.getAttribute('data-item'))()
       child.addEventListener('dragstart', (e) => {
         e.dataTransfer.setDragImage(ghost, 0, 0)
         graph.set('addNodeDragging', true)
         graph.set('addModel', addModel)
-        console.log(addModel)
       })
       child.addEventListener('dragend', (e) => {
         graph.emit('canvas:mouseup', e)
