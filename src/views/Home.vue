@@ -229,8 +229,7 @@ export default {
           'dragPanelItemAddNode',
           'clickSelected',
           'deleteItem',
-          'itemAlign',
-          'dragPoint'
+          'itemAlign'
         ]
       },
       defaultEdge: {
