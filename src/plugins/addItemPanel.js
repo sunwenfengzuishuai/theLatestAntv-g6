@@ -38,7 +38,6 @@ class AddItemPanel {
         graph.emit('canvas:mouseup', e)
         graph.set('addNodeDragging', false)
         graph.set('addModel', null)
-        console.log(e)
       })
     })
   }

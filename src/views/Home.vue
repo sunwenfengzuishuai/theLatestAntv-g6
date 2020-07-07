@@ -164,6 +164,7 @@ export default {
       return data
     },
     initEvents() {
+      //此事件尚未阻止冒泡
       this.graph.on('afteritemselected', (items) => {
         if (items && items.length > 0) {
           const item = this.graph.findById(items[0])
@@ -209,6 +210,7 @@ export default {
       const toolbar = new Toolbar({ container: this.$refs['toolbar'].$el })
       const addItemPanel = new AddItemPanel({ container: this.$refs['addItemPanel'].$el })
       const canvasPanel = new CanvasPanel({ container: this.$refs['canvas'] })
+      //plugins = [this.cmdPlugin, toolbar, addItemPanel, canvasPanel, new G6.Grid()]
       plugins = [this.cmdPlugin, toolbar, addItemPanel, canvasPanel, new G6.Grid()]
     }
     const width = this.$refs['canvas'].offsetWidth

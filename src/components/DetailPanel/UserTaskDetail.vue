@@ -11,7 +11,6 @@
           v-model="assignTypeSelect"
           @change="
             (e) => {
-              console(e)
               onChange('assignValue', [])
               onChange('assignType', e)
             }
@@ -86,8 +85,6 @@
           :value="model.dueDate ? moment(model.dueDate) : null"
           @change="
             (date) => {
-              console(date)
-              console(typeof date)
               if (date) {
                 onChange('dueDate', momentToTimestamp(date))
               } else {
@@ -149,11 +146,7 @@ export default {
     }
   },
   methods: {
-    console(val) {
-      console.log(val)
-    },
     momentToTimestamp(date) {
-      console.log(date)
       //return new Date(date._d).getTime()
       return date.format(this.dateFormat)
     }
@@ -176,7 +169,6 @@ export default {
   watch: {
     model: {
       handler(val) {
-        console.log('model watch 变了')
         if (val.assignType !== undefined) {
           this.assignTypeSelect = val.assignType
           if (val.assignType === 'assignee') {

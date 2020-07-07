@@ -85,14 +85,6 @@ export default {
     nameInput(val) {
       this.onChange('name', val)
     }
-    // model: {
-    //   handler(newval) {
-    //     console.log(newval)
-    //     this.idInput = newval.id
-    //     this.nameInput = newval.name
-    //   },
-    //   deep: true
-    // }
   }
 }
 </script>

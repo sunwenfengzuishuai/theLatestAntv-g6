@@ -36,9 +36,7 @@ export default {
       inputData: this.model.label
     }
   },
-  created() {
-    console.log('defaultDetail created')
-  },
+  created() {},
   watch: {
     inputData(val) {
       this.onChange('label', val)

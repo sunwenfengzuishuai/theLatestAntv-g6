@@ -2,8 +2,6 @@ function tab(len) {
   return [...Array(len)].map(() => ' ').join('')
 }
 export function exportXML(json, canvas, createFile = true) {
-  console.log('save()')
-  console.log(json)
   const id = canvas.id || 'flow'
   const name = canvas.name || 'flow'
   let dataObjs = ''

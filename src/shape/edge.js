@@ -286,7 +286,7 @@ export default function(G6) {
             const inOpen = openList.find((o) => o.x === p.x && o.y === p.y)
             const currentG = this.getCost(p, minCostPoint)
             if (closeList.find((o) => o.x === p.x && o.y === p.y)) {
-              console.log()
+              new Function()
             } else if (inOpen) {
               if (p.g > currentG) {
                 p.parent = minCostPoint

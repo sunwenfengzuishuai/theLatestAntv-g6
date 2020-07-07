@@ -60,7 +60,6 @@ export default function(G6) {
             this._addNodeBySubProcess(p, subProcessNode)
           }
         } else {
-          console.log(p.x, p.y)
           //超过此范围不能将面板上节点拖到canvas
           // if (p.x > 0 && p.y > 0) {
           //   this._addNode(p)

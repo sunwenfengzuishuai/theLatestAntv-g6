@@ -34,7 +34,6 @@ export default class Anchor extends Item {
     })
     this.hotpot.toFront()
     this.getKeyShape().toFront()
-    console.log(this.hotpot)
   }
   setActived() {
     this.update({ style: { ...editorStyle.anchorPointHoverStyle } })
