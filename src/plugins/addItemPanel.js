@@ -28,7 +28,10 @@ class AddItemPanel {
       'div.ant-collapse-item>div.ant-collapse-content>.ant-collapse-content-box>img[data-item]'
     )
     each(children, (child) => {
-      const addModel = new Function('return ' + child.getAttribute('data-item'))()
+      //const addModel = new Function('return ' + child.getAttribute('data-item'))()
+      const addModel = JSON.parse(child.getAttribute('data-item'))
+
+      console.log(addModel)
       child.addEventListener('dragstart', (e) => {
         e.dataTransfer.setDragImage(ghost, 0, 0)
         graph.set('addNodeDragging', true)
